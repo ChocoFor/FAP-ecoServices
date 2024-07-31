@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eco-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: eco-service
+  template:
+    metadata:
+      labels:
+        app: eco-service
+    spec:
+      containers:
+        - name: web
+          image: dynamic-web-app:latest
+          ports:
+            - containerPort: 80
+        - name: db
+          image: mariadb:latest
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: rootpassword
+            - name: MYSQL_DATABASE
+              value: eco_service

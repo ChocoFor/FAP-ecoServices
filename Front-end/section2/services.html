@@ -1,0 +1,40 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco-Service - Services aux Professionnels</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Eco-Service</h1>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#devis">Demande de Devis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="services">
+    <h2>Services aux Professionnels</h2>
+    <div id="catalogue-services"></div>
+  </section>
+
+  <section id="devis">
+    <h2>Demande de Devis</h2>
+    <form id="form-devis">
+      <label for="service">Service:</label>
+      <select id="service" name="service">
+        <!-- Options will be dynamically added -->
+      </select>
+      <label for="details">Détails:</label>
+      <textarea id="details" name="details"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <script src="services.js"></script>
+</body>
+</html>
